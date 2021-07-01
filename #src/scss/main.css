@@ -23,9 +23,11 @@ body {
   height: 100%;
   position: fixed;
   z-index: 1000;
+  top: 0;
+  left: 0;
 }
 
-.h1__title {
+.h1-title {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 72px;
@@ -34,7 +36,7 @@ body {
   cursor: default;
 }
 
-.h2__title {
+.h2-title {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 44px;
@@ -43,7 +45,8 @@ body {
   cursor: default;
 }
 
-.h3__title {
+.h3-title {
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 24px;
   line-height: 36px;
@@ -59,6 +62,7 @@ body {
 }
 
 .subject {
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 18px;
   line-height: 27px;
@@ -66,6 +70,7 @@ body {
 }
 
 .subsubject {
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 12px;
   line-height: 18px;
@@ -73,19 +78,19 @@ body {
 }
 
 @media (max-width: 796px) {
-  .h1__title {
+  .h1-title {
     font-size: 64px;
     line-height: 72px;
   }
 }
 @media (max-width: 678px) {
-  .h1__title {
+  .h1-title {
     font-size: 58px;
     line-height: 69px;
   }
 }
 @media (max-width: 422px) {
-  .h1__title {
+  .h1-title {
     font-size: 37px;
     line-height: 48px;
   }
@@ -102,7 +107,7 @@ body {
 }
 .intro {
   min-height: 100vh;
-  max-height: auto;
+  max-height: 100%;
   width: 100%;
   background-image: url(../img/intro.jpg);
   background-color: #26262660;
@@ -151,13 +156,101 @@ body {
     padding-top: 9px;
     padding-bottom: 9px;
   }
-  .header .nav {
+  .header__nav {
     display: none;
   }
   .header .burger {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+
+.services {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+.services__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.services__text {
+  padding: 0 30px;
+  margin-bottom: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.services__title {
+  max-width: 720px;
+  text-align: center;
+  color: #262626;
+  margin-bottom: 8px;
+}
+.services__subtitle {
+  max-width: 620px;
+  text-align: center;
+  color: #868FA2;
+}
+.services__content {
+  /* display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap:28px; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 30px;
+}
+.services__content .cardServices:nth-child(3n+2) {
+  margin: 0 24px 32px;
+}
+.services__content .cardServices {
+  margin-bottom: 32px;
+}
+@media (max-width: 1226px) {
+  .services__content {
+    padding: 0 45px;
+  }
+  .services .cardServices {
+    max-width: 45%;
+  }
+  .services .cardServices:nth-child(3n+2) {
+    margin: 0;
+    margin-bottom: 32px;
+  }
+  .services .cardServices:nth-child(even) {
+    margin-left: 24px;
+  }
+}
+@media (max-width: 796px) {
+  .services .cardServices:nth-child(even),
+.services .cardServices:nth-child(3n+2) {
+    margin: 0;
+  }
+  .services .cardServices {
+    max-width: 100%;
+    margin: 0 0 24px 0;
   }
 }
 
@@ -300,6 +393,12 @@ body {
 #burger {
   display: none;
 }
+#burger:checked ~ .popup {
+  display: block;
+}
+#burger:checked ~ .burger {
+  opacity: 0;
+}
 
 .burger {
   display: none;
@@ -314,6 +413,7 @@ body {
   cursor: pointer;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  opacity: 1;
 }
 .burger span {
   width: 26px;
@@ -429,6 +529,7 @@ body {
 
 .popup {
   background-color: #00000095;
+  display: none;
 }
 .popup__menu {
   padding: 20px;
@@ -458,5 +559,103 @@ body {
   padding: 8px 12px;
   margin-left: 0;
   margin-bottom: 12px;
+}
+
+#close {
+  display: none;
+}
+#close:checked ~ .popup {
+  display: none;
+}
+
+.close {
+  width: 32px;
+  height: 32px;
+  z-index: 1000;
+  position: absolute;
+  top: 18px;
+  right: 11px;
+  cursor: pointer;
+}
+.close span {
+  display: inline-block;
+  width: 32px;
+  height: 3px;
+  background-color: #FFFFFF;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: relative;
+}
+.close span::before {
+  content: "";
+  width: 32px;
+  height: 3px;
+  background-color: #FFFFFF;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  position: absolute;
+}
+.close:hover span, .close:hover span:before {
+  -webkit-box-shadow: 1px 1px 1px 0px #f21162;
+          box-shadow: 1px 1px 1px 0px #f21162;
+}
+.close:active span, .close:active span:before {
+  background-color: #F21162;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.cardServices {
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 363px;
+  -webkit-box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.09);
+          box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.09);
+  border-radius: 3px;
+  background-color: #ffffff;
+}
+.cardServices__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 28px;
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+.cardServices__icon .svg {
+  fill: #F21162;
+}
+.cardServices__subject {
+  text-align: center;
+  margin-bottom: 8px;
+  color: #262626;
+}
+.cardServices__subtitle {
+  font-size: 14px;
+  text-align: center;
+  color: #868FA2;
+}
+.cardServices:hover .cardServices__icon {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
 }
 /*# sourceMappingURL=main.css.map */

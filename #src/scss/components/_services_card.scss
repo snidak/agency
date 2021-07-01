@@ -1,0 +1,34 @@
+.cardServices{
+    padding:40px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    max-width: (1141px - 52px) / 3;
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.09);
+    border-radius: 3px;
+    background-color: $bgCardService;
+
+    &__icon{
+        display:flex;
+        align-items:flex-end;
+        justify-content: center;
+        margin-bottom: 28px;
+        transition: all 2s ease-in-out;
+        .svg{
+            fill:$primary;
+        }
+    }
+    &__subject{
+        text-align:center;
+        margin-bottom: 8px;
+        color: $dark;
+    }
+    &__subtitle{
+        font-size:14px;
+        text-align:center;
+        color: $subtitle;
+    }
+    &:hover &__icon{
+        transform: rotateY(360deg);
+    }
+}

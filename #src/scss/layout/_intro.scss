@@ -1,0 +1,31 @@
+.intro{
+    min-height:100vh;
+    max-height:auto;
+    width:100%;
+    background-image:url(../img/intro.jpg);
+    background-color: #26262660;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: hue;
+    
+    &__wrap{
+        min-height: calc(100vh - 210px);
+        max-height: calc(100% - 210px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding-bottom: 90px;
+    }
+    @media (max-width:796px){
+        &{
+            &__wrap{
+                min-height: calc(100vh - 60px);
+                max-height: calc(100% - 60px);
+                padding-bottom: 20px;
+            }
+            
+        }
+    }
+}

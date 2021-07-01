@@ -1,0 +1,43 @@
+#close{
+    display: none;
+    &:checked ~ .popup{
+        display: none;
+    }
+}
+.close{
+    width:32px;
+    height:32px;
+    z-index: 1000;
+    position: absolute;
+    top: 18px;
+    right: 11px;
+    cursor: pointer;
+    span{
+        display:inline-block;
+        width: 32px;
+        height:3px;
+        background-color: $white;
+        transform-origin: center;
+        transform: rotate(45deg);
+        position: relative;
+        &::before{
+            content: '';
+            width: 32px;
+            height:3px;
+            background-color: $white;
+            transform-origin: center;
+            transform: rotate(90deg);
+            position: absolute;
+        }
+    }
+    &:hover span,
+    &:hover span:before{
+        box-shadow: 1px 1px 1px 0px rgba(242, 17, 98, 1);
+    }
+    &:active span,
+    &:active span:before{
+        background-color: $primary;
+        box-shadow: none;
+    }
+    
+}

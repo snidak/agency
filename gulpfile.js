@@ -162,11 +162,11 @@ let watch   = gulp.parallel(build, watchFiles, browserSync);
 
 
 exports.fontsStyle  = fontsStyle;
-exports.fonts  = fonts;
-exports.images  = images;
-exports.js      = js;
-exports.css     = css;  
-exports.html    = html;
-exports.build   = build;
-exports.watch   = watch;
-exports.default = watch;
+exports.fonts       = fonts;
+exports.images      = images;
+exports.js          = js;
+exports.css         = css;  
+exports.html        = html;
+exports.build       = build;
+exports.watch       = watch;
+exports.default     = watch;

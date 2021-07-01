@@ -1,0 +1,25 @@
+.nav{
+    cursor: default;
+    &__link{
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+        text-transform: uppercase;
+        cursor: pointer;
+        color: $navColor;
+        text-decoration: none;
+        transition: all .4s;
+        outline: none;
+        &:hover, &:focus{
+            text-shadow: 2px 1px 0px $primary;
+        }
+        &:active{
+            color: $primary;
+            text-shadow: 2px 1px 0px rgba(255, 255, 255, 1);
+        }
+        &:not(:first-child){
+            margin-left: 24px;
+        }
+    }
+}

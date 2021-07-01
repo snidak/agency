@@ -1,0 +1,23 @@
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding-top: 33px;
+    padding-bottom: 45px;
+
+    @media (max-width:796px){
+        &{
+            padding-top: 9px;
+            padding-bottom: 9px;
+
+            &__nav{
+                display: none;
+            }
+            .burger{
+                display: flex;
+            }
+            
+        }
+    }
+}

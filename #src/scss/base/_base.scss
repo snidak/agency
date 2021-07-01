@@ -1,0 +1,93 @@
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: $mainFontFamily;
+}
+.wrapper{
+    position: relative;
+}
+.container{
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.popup{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+.h1__title{
+    font-family: $mainFontFamily;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 85px;
+    margin:0;
+    cursor: default;
+}
+.h2__title{
+    font-family: $mainFontFamily;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 66px;
+    margin:0;
+    cursor: default;
+}
+.h3__title{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    margin:0;
+    cursor: default;
+}
+
+.subtitle{
+    font-family: $mainFontFamily;
+    font-size: 16px;
+    line-height: 176%;
+    cursor: default;
+}
+.subject{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    cursor: default;
+}
+.subsubject{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    cursor: default;
+}
+
+@media (max-width:796px){
+    .h1__title{
+        font-size: 64px;
+        line-height: 72px;
+    }
+}
+@media (max-width:678px){
+    .h1__title{
+        font-size: 58px;
+        line-height: 69px;
+    }
+}
+@media (max-width:422px){
+    .h1__title{
+        font-size: 37px;
+        line-height: 48px;
+    }
+    .subtitle{
+        font-size: 13px;
+    }
+}
+@media (max-width:375px){
+    .h1__title{
+        font-size: 34px;
+        line-height: 42px;
+    }
+}

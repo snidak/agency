@@ -1,0 +1,64 @@
+#burger{
+    display:none;
+
+    &:checked ~ .popup{
+        display:block;
+    }
+    &:checked ~ .burger{
+        opacity: 0;
+    }
+}
+.burger{
+    display:none;
+    align-items:center;
+    justify-content: center;
+    width: 26px;
+    height: 20px;
+    cursor: pointer;
+    transition: all .4s;
+    opacity: 1;
+    span{
+        width:26px;
+        height:3px;
+        background-color: $navColor;
+        position: relative;
+        display: inline-block;
+        transition: all .4s;
+        &::before{
+            content: "";
+            width:26px;
+            height:3px;
+            background-color: $navColor;
+            position:absolute;
+            top: -8px;
+            left: 0;
+            transition: all .4s;
+        }
+        &::after{
+            content: "";
+            width:26px;
+            height:3px;
+            background-color: $navColor;
+            position:absolute;
+            bottom: -8px;
+            left: 0;
+            transition: all .4s;
+        }
+    }
+    &:hover > span,
+    &:hover > span::after,
+    &:hover > span::before{
+        box-shadow: 1px 1px 1px 0px rgba(242, 17, 98, 1);
+    }
+    &:focus > span,
+    &:focus > span::after,
+    &:focus > span::before{
+        box-shadow: 1px 1px 1px 0px rgba(242, 17, 98, 1);
+    }
+    &:active > span,
+    &:active > span::after,
+    &:active > span::before{
+        background-color: $primary;
+        box-shadow: none;
+    }
+}

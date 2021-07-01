@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Benne-Regular";
+  font-display: swap;
+  src: url("../fonts/Benne-Regular.woff") format("woff"), url("../fonts/Benne-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BigShouldersStencilDisplay-ExtraBold";
+  font-display: swap;
+  src: url("../fonts/BigShouldersStencilDisplay-ExtraBold.woff") format("woff"), url("../fonts/BigShouldersStencilDisplay-ExtraBold.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BigShouldersStencilDisplay-Black";
+  font-display: swap;
+  src: url("../fonts/BigShouldersStencilDisplay-Black.woff") format("woff"), url("../fonts/BigShouldersStencilDisplay-Black.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BigShouldersStencilDisplay-Regular";
+  font-display: swap;
+  src: url("../fonts/BigShouldersStencilDisplay-Regular.woff") format("woff"), url("../fonts/BigShouldersStencilDisplay-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BigShouldersStencilDisplay-Thin";
+  font-display: swap;
+  src: url("../fonts/BigShouldersStencilDisplay-Thin.woff") format("woff"), url("../fonts/BigShouldersStencilDisplay-Thin.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}

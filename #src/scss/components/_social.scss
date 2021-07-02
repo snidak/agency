@@ -1,0 +1,21 @@
+.social{
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content:center;
+
+    &__link{
+        &:not(:last-child){
+            margin-right: 25px;
+        }
+        .svg path{
+            transition: all .4s;
+        }
+        &:hover > .svg path{
+            fill: $primary;
+        }
+    }
+    
+    
+}

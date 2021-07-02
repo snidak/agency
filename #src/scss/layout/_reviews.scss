@@ -1,0 +1,39 @@
+.reviews{
+    
+    &__slider{
+        width: 100%;
+        overflow: hidden;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+    &__track{
+        padding-bottom: 80px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        transform: translate3d(0px, 0px, 0px);
+    }
+
+    &__control{
+        width:auto;
+    }
+    .reviews__slider .swiper-pagination{
+        bottom:0;
+    }
+    .reviews__slider .swiper-pagination-bullet{
+        width: 12px;
+        height: 12px;
+        border-radius:50%;
+        background-color: rgba(0, 0, 0, 0.2);
+        &-active{
+            background-color: $primary;
+        }
+        &:hover{
+            background-color: $primaryrgba;
+        }
+    }
+    
+    
+}

@@ -1,16 +1,13 @@
 <section class="services container">
     <div class="services__wrap">
-        <div class="services__text">
-            <h2 class="services__title h2-title">Our Services</h2>
-            <div class="services__subtitle subtitle">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more</div>
-        </div>
+        @@include("components/_h2-title.html", {"title":"Our Services"})
         <div class="services__content">
-            @@include("components/_services_card.html")
-            @@include("components/_services_card.html")
-            @@include("components/_services_card.html")
-            @@include("components/_services_card.html")
-            @@include("components/_services_card.html")
-            @@include("components/_services_card.html")
+            @@include("components/_services_card.html", {"svg":"servic_shield.svg"})
+            @@include("components/_services_card.html", {"svg":"servic_emoji.svg"})
+            @@include("components/_services_card.html", {"svg":"servic_cast.svg"})
+            @@include("components/_services_card.html", {"svg":"servic_shield.svg"})
+            @@include("components/_services_card.html", {"svg":"servic_emoji.svg"})
+            @@include("components/_services_card.html", {"svg":"servic_cast.svg"})
         </div>
     </div>
 </section>

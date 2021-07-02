@@ -1,0 +1,17 @@
+<section class="reviews container">
+
+    @@include("components/_h2-title.html", {"title":"Listen to our customers"})
+
+    <div class="reviews__slider swiper-container">
+        <div class="reviews__track swiper-wrapper">
+            @@include("components/_slide.html", {name: "Salman Khan", prof: "ui designer", userpic: "1", star: "3"})
+            @@include("components/_slide.html", {name: "Waleed Khan", prof: "Web Developer", userpic: "2", star: "5"})
+            @@include("components/_slide.html", {name: "Dark Kohana", prof: "Front-end", userpic: "3", star: "4"})
+            @@include("components/_slide.html", {name: "Werginya Manul", prof: "Back-end", userpic: "4", star: "2"})
+            @@include("components/_slide.html", {name: "Popit an", prof: "Web Designer", userpic: "5", star: "3"})
+            @@include("components/_slide.html", {name: "Rosuel DDx", prof: "Front-end", userpic: "6", star: "5"})
+        </div>
+        <div class="reviews__control swiper-pagination">
+        </div>
+    </div>
+</section>

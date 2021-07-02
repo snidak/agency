@@ -1,0 +1,61 @@
+.portfolioCard{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: default;
+    overflow: hidden;
+    
+    &:hover &__content{
+        opacity: 1;
+    }
+    &:hover img{
+        transform: scale(1.15) rotate(3deg);
+    }
+    
+    &__content{
+        width:100%;
+        min-height: 600px;
+        height:100%;
+        z-index: 2;
+        background-color: rgba(242, 17, 98, 0.9);
+        padding: 64px 56px 64px 64px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-end;
+        transition: opacity .4s;
+        opacity: 0;
+    }
+    &__title{
+        color: $white;
+        margin-bottom: 16px;
+        a{
+            color: $white;
+            text-decoration:none;
+            transition: all .4s;
+            &:hover{
+                text-shadow: 2px 1px 0px $dark;
+            }
+            &:active{
+                text-decoration:underline;
+            }
+        }
+    }
+    &__subtitle{
+        color: $white;
+    }
+    &__pic{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+        img{
+            transition: all .4s;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.intro,
+.services,
+.cpunter,
+.portfolio,
+.reviews,
+.cta,
+.team,
+.main__hr,
+.blog{
+    margin-bottom: 130px;
+    @media (max-width:1226px){
+        &{
+            margin-bottom: 110px;
+        }
+    }
+    @media (max-width:796px){
+        &{
+            margin-bottom: 100px;
+        }
+    }
+    @media (max-width:678px){
+        &{
+            margin-bottom: 80px;
+        }
+    }
+    @media (max-width:422px){
+        &{
+            margin-bottom: 60px;
+        }
+    }
+} 

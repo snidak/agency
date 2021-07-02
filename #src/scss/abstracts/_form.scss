@@ -1,0 +1,25 @@
+.input__text, 
+.textarea{
+    font-family: $mainFontFamily;
+    color: $subtitle;
+    font-size: 16px;
+    padding: 13px 30px 13px 24px;
+    line-height: 176%;
+    text-shadow: none;
+    box-shadow: none;
+    border-radius: 0;
+    border: 1px solid transparent;
+    outline:0;
+    resize: none;
+    transition: all .4s;
+    &:focus{
+        outline: 1px solid $primary;
+    }
+    &:hover{
+        border: 1px solid $subtitle;
+    }
+    &:active{
+        border: 1px solid $primary;
+    }
+}
+

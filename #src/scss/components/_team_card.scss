@@ -1,0 +1,46 @@
+.teamCard{
+    width: calc((100% - 50px) / 3);
+    padding-bottom: 10px;
+    &__text{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+    &__username{
+        text-align: center;
+        padding: 0 30px;
+        a{
+            color: $dark;
+            text-decoration:none;
+            transition: all .4s;
+            &:hover, &:focus{
+                text-shadow: 2px 1px 0px $primary;
+            }
+            &:active{
+                color: $primary;
+                text-shadow: 2px 1px 0px $dark;
+            }
+        }
+    }
+    &__prof{
+        margin-top: 4px;
+        color: $subtitle;
+        padding: 0 25px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__pic{
+        width: 100%;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height:460px;
+            object-fit: cover;
+            transition: all .4s;
+        }
+    }
+    &:hover &__pic img{
+        transform: scale(1.02) rotate(-1deg);
+    }
+}

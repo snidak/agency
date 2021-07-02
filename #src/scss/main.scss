@@ -3,12 +3,14 @@
 @import 'abstracts/_mixins.scss';
 @import 'abstracts/_placeholders.scss';
 @import 'abstracts/_keyframes.scss';
+@import 'abstracts/_form.scss';
 
 @import 'vendors/_bootstrap.scss';
 @import 'vendors/_jquery-ui.scss';
 
 @import 'base/_typography.scss';
 @import 'base/_base.scss';
+@import 'base/_mr_block.scss';
 @import 'base/_reset.scss';
 
 
@@ -16,8 +18,16 @@
 @import 'layout/_header.scss';
 @import 'layout/_services.scss';
 @import 'layout/_cpunter.scss';
+@import 'layout/_portfolio.scss';
+@import 'layout/_reviews.scss';
+@import 'layout/_cta.scss';
+@import 'layout/_team.scss';
+@import 'layout/_blog.scss';
+@import 'layout/_contact.scss';
+@import 'layout/_footer.scss';
 
 @import 'components/_buttons.scss';
+@import 'components/_h2-title.scss';
 @import 'components/_logotype.scss';
 @import 'components/_nav.scss';
 @import 'components/_burger.scss';
@@ -25,6 +35,11 @@
 @import 'components/_popup_menu.scss';
 @import 'components/_close.scss';
 @import 'components/_services_card.scss';
+@import 'components/_portfolio_card.scss';
+@import 'components/_slide.scss';
+@import 'components/_team_card.scss';
+@import 'components/_blog_card.scss';
+@import 'components/_social.scss';
 
 @import 'pages/_home.scss';
 @import 'pages/_contact.scss';

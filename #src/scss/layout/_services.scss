@@ -1,30 +1,9 @@
 .services{
-    padding-top: 130px;
-    padding-bottom:130px;
     
     &__wrap{
         display:flex;
         flex-direction:column;
         align-items:center;
-    }
-    &__text{
-        padding: 0 30px;
-        margin-bottom: 80px;
-
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-    }
-    &__title{
-        max-width: 720px;
-        text-align:center;
-        color: $dark;
-        margin-bottom: 8px;
-    }
-    &__subtitle{
-        max-width:620px;
-        text-align:center;
-        color: $subtitle;
     }
     &__content{
         display:flex;
@@ -40,12 +19,8 @@
         }
     }
     @media (max-width:1226px){
-        &{
-            padding-top: 100px;
-            padding-bottom: 100px;
-            &__content{
-                padding: 0 45px;
-            }
+        &__content{
+            padding: 0 45px;
         }
         .cardServices{
             max-width: 45%;
@@ -59,13 +34,6 @@
         }
     }
     @media (max-width:796px){
-        &{
-            padding:75px 0;
-
-            &__text{
-                margin-bottom: 45px;
-            }
-        }
         .cardServices:nth-child(even), 
         .cardServices:nth-child(3n+2){
             margin: 0;
@@ -77,11 +45,8 @@
         }
     }
     @media (max-width:375px){
-        &{
-            padding: 40px 0;
-            &__content{
-                padding: 0 15px;
-            }
+        &__content{
+            padding: 0 15px;
         }
         .cardServices{
             padding: 20px 25px;

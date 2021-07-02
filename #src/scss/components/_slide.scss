@@ -1,0 +1,93 @@
+.slide{
+    padding:60px;
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.09);
+    background-color: $white;
+    max-width: 48%;
+    margin:0 1%;
+    flex-shrink: 0;
+    &__user{
+        display:flex;
+        align-items:center;
+        margin-bottom: 22px;
+    }
+    &__userpic{
+        margin-right: 18px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        overflow: hidden;
+        img{
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius:50%;
+        }
+    }
+    &__username{
+        color: $dark;
+        max-width: 325px;
+    }
+    &__prof{
+        margin-top: 4px;
+        color: $primary;
+        max-width: 325px;
+        text-transform: uppercase;
+    }
+    &__text{
+        color:$subtitle;
+        margin-bottom: 22px;
+    }
+    &__score{
+        .svg{
+            &__path{
+                stroke:$primary;
+                stroke-linecap:round;
+            }
+        }
+    }
+
+    .star-1 .svg__path:nth-child(1),
+    .star-2 .svg__path:nth-child(-n+2),
+    .star-3 .svg__path:nth-child(-n+3),
+    .star-4 .svg__path:nth-child(-n+4),
+    .star-5 .svg__path:nth-child(-n+5){
+        fill: $primary;
+    }
+
+    @media (max-width:796px){
+        &{
+            max-width: 98%;
+        }
+    }
+    @media (max-width:450px){
+        &{
+            padding: 35px;
+            &__user{
+                flex-direction: column;
+                align-items: center;
+            }
+            &__userpic{
+                margin-right: 0;
+                margin-bottom: 12px;
+            }
+            &__user__text{
+                padding: 0 30px;
+                text-align: center;
+            }
+            &__username,
+            &__prof,
+            &__text{
+                text-align: center;
+            }
+            &__score{
+                display:flex;
+                justify-content:center;
+            }
+        }
+    }
+    @media (max-width:375px){
+        &{
+            box-shadow:none;
+        }
+    }
+}

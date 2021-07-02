@@ -1,0 +1,16 @@
+<section class="contact ">
+    <div class="container">
+        @@include("components/_h2-title.html", {"title": "Let's get in touch today!"})
+        <div class="contact__content">
+            <form class="contact__form" action="#">
+                <div class="contact__row">
+                    <input class="contact__firstName input__text" type="text" placeholder="First name" required>
+                    <input class="contact__lastName input__text" type="text" placeholder="Last name" required>
+                </div>
+                <input class="contact__email input__text" type="email" placeholder="Email adress" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                <textarea class="contact__textarea textarea" id="contact__textarea" name="contactTextarea"  placeholder="Your message" required></textarea>
+                <button class="contact__btn btn btn--primary">Get started</button>
+            </form>
+        </div>
+    </div>
+</section>

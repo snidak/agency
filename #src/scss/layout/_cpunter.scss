@@ -1,11 +1,70 @@
 .cpunter{
     width:100%;
-    padding:126px 0 125px;
-    background-image: url(../img/intro.jpg);
-
+    padding:111px 0 110px;
+    background-image: url(../img/cpunter.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     &__content{
         display:flex;
         align-items:center;
         justify-content:space-between;
+        padding:0 42px;
+    }
+    &__item{
+        max-width:262px;
+        padding: 15px;
+
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+    }
+    &__title{
+        text-align:center;
+        color: $white;
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+        position: relative;
+        &::after{
+            content: "";
+            width:79px;
+            height: 3px;
+            background-color: $primary;
+            position: absolute;
+            bottom:0;
+            left:50%;
+            transform:translate(-50%, 0);
+        }
+    }
+    &__subsubject{
+        text-align:center;
+        text-transform: uppercase;
+        color:$white;
+    }
+    @media (max-width:796px){
+        &{
+            &__content{
+                flex-wrap: wrap;
+                justify-content:center;
+            }
+            &__item{
+                max-width:initial;
+                width:34%;
+            }
+        }
+    }
+    @media (max-width:574px){
+        &{
+            &__item{
+                width:44%;
+            }
+        }
+    }
+    @media (max-width:460px){
+        &{
+            &__item{
+                width:100%;
+            }
+        }
     }
 }
